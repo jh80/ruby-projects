@@ -3,6 +3,10 @@ def caesarCipher2 (string, shiftNum)
   upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
   lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
+  while shiftNum < 0
+    shiftNum += 26
+  end
+
   string.each_char do |char|
     if upper.include?(char)
       codeIndex = upper.index(char) + shiftNum
