@@ -1,6 +1,10 @@
 
 def caesar_cipher(string, shiftNum)
    msg = ""
+   # For negative shiftNum
+   while shiftNum < 0
+    shiftNum += 26
+   end
 
   # Check if char is a letter
   string.each_byte do |byte|
