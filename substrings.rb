@@ -4,9 +4,10 @@ def substrings (string, dictionary)
   hash = {}
   string = string.downcase
   dictionary.each do |word|
+    word.downcase
     matches = 0
     for i in 0..(string.length - 1)
-      if string[i].downcase == word[matches]
+      if string[i] == word[matches]
         if matches == 0
           resume = i + 1
         end
