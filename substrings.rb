@@ -1,4 +1,6 @@
-# dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+require 'pry-byebug'
+
+dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
 def substrings (string, dictionary)
   hash = {}
@@ -12,6 +14,9 @@ def substrings (string, dictionary)
           resume = i + 1
         end
         matches += 1
+
+        binding.pry
+
         if matches == word.length
           # add word count to hash
           if hash[word] 
@@ -30,3 +35,5 @@ def substrings (string, dictionary)
   end
   hash
 end
+
+substrings("Howdy, there partner!", dictionary)
