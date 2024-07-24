@@ -9,14 +9,11 @@ def bubble_sort(array)
     swapped = false
     for i in 1..n
       if sortedArray[i] < sortedArray[i - 1]
-        temp = sortedArray[i]
-        sortedArray[i] = sortedArray[i - 1]
-        sortedArray[i - 1] = temp
+        sortedArray[i], sortedArray[i - 1] = sortedArray[i - 1],sortedArray[i]
         swapped = true
       end
-      n = n-1
-      p sortedArray
     end
+    n = n-1
   end
   sortedArray
 end
