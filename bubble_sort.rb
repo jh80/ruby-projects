@@ -1,6 +1,5 @@
 def bubble_sort(array)
   swapped = true
-  sortedArray = []
   while swapped == true do
     swapped = false
     array.each_with_index do |num, index|
@@ -8,11 +7,10 @@ def bubble_sort(array)
         break
       end
       if num > array[index+1]
-        array[index] = array[index+1]
-        array[index+1] = num
+        array[index], array[index+1] = array[index+1], array[index]
         swapped = true
       end
     end
   end
-  sortedArray
+  array
 end
